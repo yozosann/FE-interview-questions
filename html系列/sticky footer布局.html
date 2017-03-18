@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent{
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            height: 500px;
+            width: 350px;
+            border: 1px solid black;
+            
+        }
+        .outer{
+            position: relative;
+            box-sizing: border-box;
+            min-height: 100%;
+            padding: 10px 10px 40px 10px;
+        }
+        .content{
+            width: 100%;
+            height: 60px;
+        }
+        .bottom{
+            position: absolute;
+            bottom:5px;
+            width: 50%;
+            height: 30px;
+            background-color: red;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="outer">
+            <div class="content"></div>
+            <div class="bottom">哈哈哈 this is a lonhlonglonlonglongglonglong。</div>
+        </div>
+    </div>
+</body>
+</html>

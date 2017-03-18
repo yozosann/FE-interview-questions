@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: red;
+            height: 20px;
+            margin-bottom: 5px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var $li = document.getElementsByTagName('li');
+        //无论点击哪个都出现6
+        // for(var i = 0; i<$li.length; i++){
+        //     $li[i].onclick = function(){
+        //         alert(i);
+        //     }
+        // }
+
+        //若把var改成let 那么就会出现正确结果 等效于
+        for(var i = 0; i<$li.length; i++){
+            (function(i){
+                $li[i].onclick = function(){
+                    alert(i);
+                }
+            })(i)
+        }
+    </script>
+</body>
+</html>

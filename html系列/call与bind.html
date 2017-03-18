@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fnc = function(a, b, c){
+            console.log(a, b, c);
+        }
+        fnc.call(null,'a');
+        var fn = fnc.bind(null,'A');
+        fn('B','C');
+    </script>
+</body>
+</html>

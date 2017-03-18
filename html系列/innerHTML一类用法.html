@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <div id="div1"><span>abcd</span></div>
+</head>
+<body>
+    <script>
+        var div = document.getElementById('div1');
+        //读
+        console.log(div.innerHTML);
+        console.log(div.outerHTML);
+        console.log(div.innerText);
+        console.log(div.outerText);
+        //写
+        //div.innerHTML = "<p>大米</p>";    //div保留
+        //div.outerHTML = "<p>大米</p>";    //div也被取代了
+        //div.innerText = "米老鼠";
+        //console.log(div);           //div中包裹米老鼠
+        div.outerText = '<p>www</p>'  //将原来单元素直接变成了纯文本，包括外围<div>
+    </script>
+</body>
+</html>

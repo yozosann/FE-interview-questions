@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #d1{
+            border: dotted;
+            line-height: 150px;
+            margin-bottom: 20px;
+        }
+
+        #d2{
+            height: 200px;
+            border: dotted;
+            line-height: 200px;
+            margin-bottom: 20px;
+        }
+            #d2 span{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 16px;
+        }
+            #d2 i{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+
+        #d3{
+            height: 200px;
+            border: dotted;
+            display: table;
+        }
+            #d3 span{
+                display: table-cell;
+                vertical-align: middle;
+            }
+    </style>
+</head>
+<body>
+    <strong>单行居中：</strong>
+    <div id="d1">首先要知道行高的几种表示方法：px/em，或normal，或百分值，或数值，或inherit继承。</div>
+    <strong>多行居中：</strong>
+    <div id="d2">
+        <span>首先要知道行高的几种表示方法：px/em，或noddddrmal，或百分值，或数值，或inherit继承。<br />
+        首先要知道行高的几种表示方法：px/em，或norm .  al，或百分值，或数值，或inherit继承。<br />
+        首先要知道行高的几种表示方法：px/em，或normal，或百分值，或数值，或inherit继承。<br /></span>
+        <i>&nbsp;</i>
+    </div>
+    <strong>未知高度居中：</strong>
+    <div id="d3">
+        <span>首先要知道行高的几种表示方法：px/em，或normal，或百分值，或数值，或inherit继承。<br />
+        iiiiiiedendeneideinde
+        </span>
+    </div>
+</body>
+</html>

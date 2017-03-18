@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7];
+        arr.reduce(function(pre,cur,index){
+            console.log(pre + cur * cur);
+            return pre + cur * cur;
+        });
+    </script>
+</body>
+</html>

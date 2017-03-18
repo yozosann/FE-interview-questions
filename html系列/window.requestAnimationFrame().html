@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .move {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="move" style="left: 30px;top: 40px;"></div>
+    <script>
+        const square = document.getElementsByClassName('move')[0];
+        let progress = 0
+        let left = square.style.left;
+        let index = left.indexOf('p');
+        left = Math.floor(left.slice(0, index));
+
+        function move() {
+            square.style.left = ++left + 'px';
+            progress++
+            if (progress < 500) {
+                window.requestAnimationFrame(move);
+            }
+        }
+        move();
+    </script>
+</body>
+
+</html>
