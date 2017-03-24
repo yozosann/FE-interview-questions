@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            font-size: 62.5%;
+        }
+            .inner-left{
+                text-indent: 200%;
+                display: block;
+                color: black;
+                background-color: blanchedalmond;
+            }
+        .right {
+            width: 300px;
+            height: 230px;
+            background-color: burlywood;
+            overflow: hidden;
+            font-size: 62.5%;
+        }
+            .inner-right{
+                text-indent: 2em;
+                display: block;
+                color: black;
+                background-color: blanchedalmond;
+            }
+    </style>
+</head>
+
+<body>
+    <!--激发bfc之后，right到了left的左部-->
+    <div class="left">
+        <div class="inner-left">浏览器CSS匹配不是从左到右进行查找，而是从右到左进行查找。比如#divBox p span.red{color:red;}，浏览器的查找顺序如下：先查找html中所有class='red'的span元素，找到后，再查找其父辈元素中是否有p元素，再判断p的父元素中是否有id为divBox的div元素，如果都存在则匹配上。浏览器从右到左进行查找的好处是为了尽早过滤掉一些无关的样式规则和元素。
+</div>
+    </div>
+    <div class="right">
+        <div class="inner-right">浏览器CSS匹配不是从左到右进行查找，而是从右到左进行查找。比如#divBox p span.red{color:red;}，浏览器的查找顺序如下：先查找html中所有class='red'的span元素，找到后，再查找其父辈元素中是否有p元素，再判断p的父元素中是否有id为divBox的div元素，如果都存在则匹配上。浏览器从右到左进行查找的好处是为了尽早过滤掉一些无关的样式规则和元素。
+</div>
+    </div>
+</body>
+
+</html>

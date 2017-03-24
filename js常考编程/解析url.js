@@ -21,7 +21,6 @@ function parseURL(url) {
         file: (a.pathname.match(/\/([^\/?#]+)$/i) || [, ''])[1],
         hash: a.hash.replace('#', ''),
         path: a.pathname.replace(/^([^\/])/, '/$1'),
-        path11: a.pathname,
         relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [, ''])[1],
         segments: a.pathname.replace(/^\//, '').split('/')
     };

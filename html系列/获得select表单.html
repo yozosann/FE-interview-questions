@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="a">
+        <select name="a" size="1" id="obj">
+            <option value="a">1</option>
+            <option value="b" selected>2</option>
+            <option value="c">3</option>
+        </select>
+    </form>
+    <script>
+        console.log(obj.options[obj.selectedIndex].text);
+    </script>
+</body>
+</html>
