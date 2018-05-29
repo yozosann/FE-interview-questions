@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <style type="text/css">
+     * {
+      font-size: 12px;
+      font-family: Verdana, Geneva, sans-serif;
+      line-height: 14px
+    }
+
+    a {
+      color: #039
+    }
+
+    a:hover {
+      color: #f60
+    }
+
+    .pop {
+      position: absolute;
+      left: 40%;
+      top: 40%;
+      width: 300px;
+      height: 100px;
+      background: #eee;
+      border: 1px solid #ccc
+    }
+
+    .pop_head {
+      position: relative;
+      height: 20px;
+      background: #ccc
+    }
+
+    .pop_head a {
+      position: absolute;
+      right: 8px;
+      line-height: 20px;
+      color: #000;
+      text-decoration: none
+    }
+
+    .pop_head a:hover {
+      color: #f60;
+      text-decoration: none
+    }
+
+    .pop_body {
+      padding: 8px
+    }
+  </style>
+</head>
+
+<body>
+  <!--首先设置一个层:-->
+  <div id="pop" class="pop" style="display:none" onclick="show(event,'pop');">
+    <div class="pop_head">
+      <a href="javascript:void(0);" onclick="hide('pop')">关闭</a>
+    </div>
+    <div class="pop_body">谢谢光临……</div>
+  </div>
+  <!--弹出层的按钮:-->
+  <a href="javascript:void(0);" onclick="show(event,'pop');">弹出按钮</a>
+  <script type="text/javascript"> 
+    var url = '#';
+    function show(evt, o) {
+      evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
+      var o = document.getElementById(o);
+      o.style.display = "";
+    }
+    function hide(o) {
+      var o = document.getElementById(o);
+      o.style.display = "none";
+      window.location = url;
+    }
+    document.onclick = function () { hide('pop'); }
+  </script>
+</body>
+
+</html>
